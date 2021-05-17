@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root{
+
+    --backgroundOrangeSedans:hsl(31, 77%, 52%);
+    --backgroundCyanSuvs:hsl(184, 100%, 22%);
+    --backgroundCyanLuxury: hsl(179, 100%, 13%);
+    --backgroundPage: hsl(0, 0%, 95%);
+    --paragraphColor:hsla(0, 0%, 100%, 0.75);
+    --fontBigShoulder: 'Big Shoulders Display', cursive;
+    --fontLexendDeca: 'Lexend Deca', sans-serif;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--backgroundPage);
+    font-size: 15px;
+    font-family: var(--fontLexendDeca);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+}
+
+.box{
+    width:18.75rem;
+    height:27.5rem;
+    max-height: 27.5rem;
+}
+
+.box > .box-center{
+    margin-left: 40px;
+}
+
+.box-center > .box-imagine{
+    margin:40px 0 20px 0;
+}
+
+.box-center > .box-name{
+    margin: 0 0 20px 0;
+}
+
+.box-center > .box-name > h1{
+    color:var(--backgroundPage);
+    font-family: var(--fontBigShoulder);
+    text-transform: uppercase;
+    word-spacing: 2px;
+}
+
+.box-center > .box-text{
+    color:var(--paragraphColor);
+    line-height: 24px;
+    padding-right: 50px;
+}
+
+.box:nth-child(1){
+    background-color:var(--backgroundOrangeSedans);
+    border-top-left-radius:8px;
+    border-bottom-left-radius:8px;
+}
+
+.box:nth-child(2){
+    background-color: var(--backgroundCyanSuvs);
+}
+
+.box:nth-child(3){
+    background-color: var(--backgroundCyanLuxury);
+    border-top-right-radius:8px;
+    border-bottom-right-radius:8px;
+}
+
+.button{
+    border: none;
+    padding: 13px 35px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+
+.sedan{color:var(--backgroundOrangeSedans);}
+.suv{color:var(--backgroundCyanSuvs);}
+.luxury{color:var(--backgroundCyanLuxury);}
+
+.button:active{
+    background-color: transparent;
+    border:1px solid var(--backgroundPage);
+}
+
+.sedan:active , .suv:active , .luxury:active{
+    color:var(--backgroundPage);
+}
+
+@media only screen and (max-width:900px){
+  
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 30px;
+    }
+    .box:nth-child(1){
+        border-bottom-left-radius: 0px;
+        border-top-right-radius:8px;
+        border-top-left-radius:8px;
+    }
+    .box:nth-child(3){
+        border-top-right-radius:0px;
+        border-bottom-right-radius:8px;
+        border-bottom-left-radius: 8px;
+    }
+} 
